@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire Flask</title>
+        <style>
+            p, label, h2{
+                color: aliceblue;
+            }
+            body {
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="/">
+            <div id="text-fields">
+              <label for="text-field-1">Premier mot :</label>
+              <input type="text" id="text-field-1" name="text-field-1">
+              <br><br>
+            </div>
+            <button type="button" onclick="addTextField()">Ajouter un champ texte</button>
+            <br><br>
+            
+            <div id="date-fields">
+              <label for="date-field-1">Date :</label>
+              <input type="date" id="date-field-1" name="date-field-1">
+              <br><br>
+            </div>
+            <button type="button" onclick="addDateField()">Ajouter un champ date</button>
+            <br><br>
+
+
+            <input type="submit" value="Valider">
+
+        </form>
+
+        <h2>{{ mdp }}</h2>
+    </body>
+    <script>
+        var textFieldCounter = 1;
+        var dateFieldCounter = 1;
+        var total = 2;
+        
+        function addTextField() {
+          textFieldCounter++;
+          total++;
+          if(total < 6)
+          {
+            var newTextField = document.createElement("div");
+            newTextField.innerHTML = '<label for="text-field-' + textFieldCounter + '">Autre mot :</label>' +
+                                   '<input type="text" id="text-field-' + textFieldCounter + '" name="text-field-' + textFieldCounter + '">' +
+                                   '<br><br>';
+            document.getElementById("text-fields").appendChild(newTextField);
+          }
+          else{
+            alert('Maximum fields created')
+          }
+        }
+        
+        function addDateField() {
+          dateFieldCounter++;
+          total++;
+          if(total < 6)
+          {
+            var newDateField = document.createElement("div");
+            newDateField.innerHTML = '<label for="date-field-' + dateFieldCounter + '">Autre date :</label>' +
+                                   '<input type="date" id="date-field-' + dateFieldCounter + '" name="date-field-' + dateFieldCounter + '">' +
+                                   '<br><br>';
+            document.getElementById("date-fields").appendChild(newDateField);
+          }
+          else{
+            alert('Maximum fields created')
+          }
+        }
+      </script>
+</html>
