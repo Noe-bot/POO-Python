@@ -1,4 +1,4 @@
-# Utilisation du polymorphisme
+# 1) Utilisation du polymorphisme
 
 Le polymorphisme consiste en la création de classes héritées de parents mais qui conservent une base de fonctions communes, afin d'être adaptées à répondre à de multiples situations. Dans le cas de mon code, la classe "PasswordGuesserAdvanced" hérite de "PasswordGuesser".
 
@@ -12,22 +12,26 @@ print(l33ted_password)
 ```
 
 Ce code démontre l'utilisation du polymorphisme, car je traite l'objet pg_advanced comme une instance de la classe de base PasswordGuesser et j'appelle la méthode l33t spécifique à la classe dérivée, tout en conservant une interface commune.
-Utilisation de l'encapsulation
+
+# 2) Utilisation de l'encapsulation
 
 L'encapsulation permet de cacher les détails de l'implémentation d'une classe en fournissant une interface publique (des méthodes d'accès) pour interagir avec les attributs.
 
 Dans le cas de mon code, par exemple, les méthodes to_lower(self) et to_upper(self) de ma classe PasswordGuesser sont encapsulées, elles manipulent les données privées de password à travers un accès publiques.
-Utilisation de la composition
+
+# 3) Utilisation de la composition
 
 La composition permet à une classe d'inclure des objets d'autres classes en tant que membres ou attributs pour construire des relations complexes entre objets en créant une structure hiérarchique.
 
 Dans le cas de mon code, c'est dans l'implémentation des classes PasswordModifier et PasswordModifierAdvanced que nous pouvons observer un cas de composition. Elle se produit dans la fonction generate_password_variants(), où un objet PasswordModifier est créé et ensuite passé à la classe PasswordModifierAdvanced pour créer un objet PasswordModifierAdvanced composé de l'objet PasswordModifier.
-Utilisation de l'héritage
+
+# 4) Utilisation de l'héritage
 
 L'héritage est la création d'une classe enfant à une classe parente qui héritera et aura accès aux méthodes de la classe parente.
 
 Dans le cadre de mon code, l'exemple le plus basique serait la classe PasswordGuesserAdvanced qui hérite de la classe PasswordGuesser.
-Utilisation d'interface
+
+# 5) Utilisation d'interface
 
 Une interface définit un ensemble de méthodes communes et garantit un comportement cohérent pour les classes qui l'implémentent, tout en favorisant la modularité, la réutilisabilité et la polymorphie.
 
@@ -48,12 +52,13 @@ class PasswordGuesser(PasswordGuesserInterface):
 
 ```
 
-Utilisation de méthodes et attributs d'objets
+# 6) Utilisation de méthodes et attributs d'objets
 
 Les méthodes sont les fonctions définies dans les classes et les attributs d'objet sont leurs paramètres. Les attributs d'objet sont des variables définies à l'intérieur d'une classe et utilisées pour stocker des valeurs spécifiques pour chaque instance de l'objet.
 
 Dans mon code, la classe PasswordGuesser contient les méthodes to_lower(), to_upper() et capitalize() par exemple. Elles prennent self en tant que premier paramètre implicite et opèrent sur l'attribut self.password.
-Utilisation de méthodes et attributs statiques
+
+# 7) Utilisation de méthodes et attributs statiques
 
 Les attributs statiques sont définis en dehors des méthodes de la classe et sont réutilisables par ces dernières.
 
@@ -71,7 +76,8 @@ def get_l33t_dict():
 ```
 
 que nous pouvons appeler si nous voulons voir le dictionnaire l33t_dict.
-Utilisation de méthodes et attributs de classe
+
+# 8) Utilisation de méthodes et attributs de classe
 
 Les méthodes de classe sont des méthodes associées à la classe elle-même plutôt qu'à une instance spécifique de cette classe. Elles sont typiquement utilisées pour initialiser des variables de classe.
 
