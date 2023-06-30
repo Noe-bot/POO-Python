@@ -54,7 +54,7 @@ class PasswordGuesser(PasswordGuesserInterface):
 
 # 6) Utilisation de méthodes et attributs d'objets
 
-Les méthodes sont les fonctions définies dans les classes et les attributs d'objet sont leurs paramètres. Les attributs d'objet sont des variables définies à l'intérieur d'une classe et utilisées pour stocker des valeurs spécifiques pour chaque instance de l'objet.
+Les méthodes sont les fonctions définies dans les classes. Les attributs d'objet sont eux des variables définies à l'intérieur d'une classe et utilisées pour stocker des valeurs spécifiques pour chaque instance de l'objet.
 
 Dans mon code, la classe **PasswordGuesser** contient les méthodes **to_lower()**, **to_upper()** et **capitalize()** par exemple. Elles prennent **self** en tant que premier paramètre implicite et opèrent sur l'attribut **self.password**.
 
