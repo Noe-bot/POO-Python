@@ -9,6 +9,7 @@ password = "password123"
 pg_advanced = PasswordGuesserAdvanced(password)
 l33ted_password = pg_advanced.l33t()
 print(l33ted_password)
+```
 
 Ce code démontre l'utilisation du polymorphisme, car je traite l'objet pg_advanced comme une instance de la classe de base PasswordGuesser et j'appelle la méthode l33t spécifique à la classe dérivée, tout en conservant une interface commune.
 Utilisation de l'encapsulation
@@ -32,7 +33,7 @@ Une interface définit un ensemble de méthodes communes et garantit un comporte
 
 En python, il n'y a pas la possibilité d'implémenter d'interfaces, mais pour se rapprocher d'un exemple similaire, j'aurais pu utiliser un code tel que :
 
-python
+```python
 
 from abc import ABC, abstractmethod
 
@@ -44,6 +45,8 @@ class PasswordGuesserInterface(ABC):
 class PasswordGuesser(PasswordGuesserInterface):
     def process_password(self, password):
         pass
+
+```
 
 Utilisation de méthodes et attributs d'objets
 
@@ -60,11 +63,12 @@ Les méthodes statiques, quant à elles, sont des méthodes qui n'ont pas accès
 
 Par exemple, dans mon code, nous avons dans la classe PasswordGuesserAdvanced :
 
-python
+```python
 
 @staticmethod
 def get_l33t_dict():
     return PasswordGuesserAdvanced.l33t_dict
+```
 
 que nous pouvons appeler si nous voulons voir le dictionnaire l33t_dict.
 Utilisation de méthodes et attributs de classe
@@ -72,8 +76,3 @@ Utilisation de méthodes et attributs de classe
 Les méthodes de classe sont des méthodes associées à la classe elle-même plutôt qu'à une instance spécifique de cette classe. Elles sont typiquement utilisées pour initialiser des variables de classe.
 
 Dans le cadre de mon code, j'ai implémenté une méthode qui vérifie si la date fournie est valide. C'est la méthode is_valid_date de la classe PasswordGuesserDate.
-
-bash
-
-Cela rend le fichier README.md plus lisible en utilisant des balises de titres, des bl
-```
